@@ -14,7 +14,7 @@ function buildFeedbackResult(feedback: MealFeedbackRequest): MealFeedbackResult 
 
   return {
     learnedPreferences,
-    nextMealAdjustment: `小满已学习本次反馈，下一餐将${needsSoft ? '更软烂' : '保持软硬适中'}、${needsLight ? '更清淡开胃' : '少油少盐'}，并避免重复让老人觉得不舒服的口味。`,
+    nextMealAdjustment: `小福已学习本次反馈，下一餐将${needsSoft ? '更软烂' : '保持软硬适中'}、${needsLight ? '更清淡开胃' : '少油少盐'}，并避免重复让老人觉得不舒服的口味。`,
     familySummary: `饭后反馈已记录：胃口 ${feedback.appetiteScore}/5，合口程度 ${feedback.tasteScore}/5，${feedback.finishedLevel}。`,
   };
 }
@@ -24,6 +24,6 @@ export function submitMealFeedback(feedback: MealFeedbackRequest): Promise<ApiRe
     method: 'POST',
     body: feedback,
     mockData: () => buildFeedbackResult(feedback),
-    friendlyError: '饭后反馈接口暂时不可用，小满已先记录在本地演示状态中。',
+    friendlyError: '饭后反馈接口暂时不可用，小福已先记录在本地演示状态中。',
   });
 }

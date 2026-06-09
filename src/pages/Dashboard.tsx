@@ -18,8 +18,8 @@ export function Dashboard({ profile, weather, snapshot, mealPlan, routeRecommend
     <div>
       <PageHeader
         eyebrow="今日总览 Dashboard"
-        title="小满今日陪伴状态"
-        description="把老人今日身体状态、三餐、购物路线、天气提醒和家属反馈放在一个分页面工作台里，便于汇报时逐页演示。"
+        title="小福今日陪伴状态"
+        description="把老人今日身体状态、三餐、购物路线、天气提醒和家属反馈放在一个联动演示台里。"
         badge="产品 Demo 运行中"
       />
 
@@ -32,7 +32,7 @@ export function Dashboard({ profile, weather, snapshot, mealPlan, routeRecommend
 
       <div className="mt-5 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
         <SectionCard>
-          <h2 className="text-2xl font-black text-slate-950">小满今日摘要</h2>
+          <h2 className="text-2xl font-black text-slate-950">小福今日摘要</h2>
           <div className="mt-5 grid gap-3">
             {[snapshot.companionState, snapshot.mealState, snapshot.shoppingPlan, snapshot.weatherHint, snapshot.familySummary].map((item) => (
               <p key={item} className="rounded-[1rem] bg-[#faf7ef] p-4 text-sm font-semibold leading-7 text-slate-700">{item}</p>
@@ -42,7 +42,7 @@ export function Dashboard({ profile, weather, snapshot, mealPlan, routeRecommend
 
         <SectionCard className="bg-[#f4fbf9]">
           <h2 className="text-2xl font-black text-slate-950">家属反馈摘要</h2>
-          <p className="mt-4 text-base leading-8 text-slate-700">{familyReport.xiaomanMessage}</p>
+          <p className="mt-4 text-base leading-8 text-slate-700">{familyReport.companionMessage}</p>
           <div className="mt-5 rounded-[1rem] bg-white p-4 text-sm font-bold text-[#2f6f68]">
             {familyReport.attentionItems[0]}
           </div>

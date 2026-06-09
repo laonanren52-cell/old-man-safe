@@ -9,7 +9,7 @@ export interface FamilyReportContext {
 
 export function getFamilyDailyReport(context?: FamilyReportContext): Promise<ApiResponse<FamilyDailyReport>> {
   const routeText = context?.routeRecommendation
-    ? `购物路线建议选择${context.routeRecommendation.bestRoute.name}，${context.routeRecommendation.recommendationReason}`
+    ? `下午购物建议选择${context.routeRecommendation.bestRoute.storeName}，${context.routeRecommendation.recommendationReason}`
     : familyDailyReportMock.routeSummary;
 
   const feedbackText = context?.feedbackResult
@@ -21,7 +21,7 @@ export function getFamilyDailyReport(context?: FamilyReportContext): Promise<Api
       ...familyDailyReportMock,
       routeSummary: routeText,
       feedbackSummary: feedbackText,
-      xiaomanMessage: `${familyDailyReportMock.xiaomanMessage}${context?.feedbackResult ? context.feedbackResult.nextMealAdjustment : ''}`,
+      companionMessage: `${familyDailyReportMock.companionMessage}${context?.feedbackResult ? context.feedbackResult.nextMealAdjustment : ''}`,
     },
   });
 }

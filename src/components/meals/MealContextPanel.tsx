@@ -30,7 +30,7 @@ export function MealContextPanel({ elder, weather }: MealContextPanelProps) {
         </div>
       </SectionCard>
       <SectionCard>
-        <h3 className="text-lg font-black text-slate-950">小满判断</h3>
+        <h3 className="text-lg font-black text-slate-950">小福判断</h3>
         <p className="mt-4 text-sm leading-7 text-slate-600">{weather.appetiteImpact}</p>
         <p className="mt-3 rounded-[1rem] bg-[#fff3df] p-3 text-sm leading-6 text-slate-700">{weather.dietHint}</p>
       </SectionCard>

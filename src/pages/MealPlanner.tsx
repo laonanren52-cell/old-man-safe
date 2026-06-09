@@ -22,7 +22,7 @@ export function MealPlanner({ profile, weather, solarTerm, latestFeedback, mealP
       <PageHeader
         eyebrow="三餐生成 Meal Planner"
         title="根据身体状态、天气、节气和饭后反馈动态生成三餐"
-        description="小满会参考老人档案、上一餐反馈、天气热冷、季节和节气，生成不重复、易执行的三餐建议。"
+        description="小福会参考老人档案、上一餐反馈、天气热冷、季节和节气，生成不重复、易执行的三餐建议。"
         badge={mealPlan ? '已生成方案' : '等待生成'}
       />
 
@@ -33,7 +33,7 @@ export function MealPlanner({ profile, weather, solarTerm, latestFeedback, mealP
         <p className="mt-3 text-sm leading-7 text-slate-600">
           {latestFeedback
             ? `已记录：胃口 ${latestFeedback.appetiteScore}/5，合口 ${latestFeedback.tasteScore}/5，${latestFeedback.finishedLevel}，反馈 ${[...latestFeedback.tasteTags, ...latestFeedback.bodyFeeling].join('、')}。`
-            : '暂无新的饭后反馈，小满将先按老人档案、天气和节气生成。'}
+            : '暂无新的饭后反馈，小福将先按老人档案、天气和节气生成。'}
         </p>
       </SectionCard>
 
@@ -53,7 +53,7 @@ export function MealPlanner({ profile, weather, solarTerm, latestFeedback, mealP
         {plans.length > 0 ? plans.map((plan) => <MealPlanCard key={plan.mealType} plan={plan} />) : (
           <SectionCard className="xl:col-span-3 bg-[#fffaf1]">
             <h2 className="text-xl font-black text-slate-950">还没有生成三餐</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-600">点击“生成今日三餐”，小满会根据 {profile.name} 的档案、{weather.weather}、{solarTerm.name} 和饭后反馈生成方案。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-600">点击“生成今日三餐”，小福会根据 {profile.name} 的档案、{weather.weather}、{solarTerm.name} 和饭后反馈生成方案。</p>
           </SectionCard>
         )}
       </div>

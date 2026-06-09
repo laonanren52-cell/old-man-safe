@@ -16,12 +16,12 @@ interface SidebarProps {
 export function Sidebar({ items, activePage, onPageChange }: SidebarProps) {
   return (
     <aside className="hidden w-[280px] shrink-0 lg:block">
-      <div className="sticky top-5 rounded-[1.5rem] border border-white/75 bg-white/82 p-4 shadow-[0_24px_70px_rgba(15,23,42,0.10)] backdrop-blur-xl">
+      <div className="sticky top-5 rounded-[1.5rem] border border-white/75 bg-white/92 p-4 shadow-[0_22px_58px_rgba(58,50,38,0.10)]">
         <button className="flex w-full items-center gap-3 rounded-[1.2rem] bg-[#2f6f68] p-4 text-left text-white">
-          <span className="grid h-11 w-11 place-items-center rounded-[0.9rem] bg-white/16 text-xl font-black">满</span>
+          <span className="grid h-11 w-11 place-items-center rounded-[0.9rem] bg-white/16 text-xl font-black">福</span>
           <span>
-            <span className="block text-lg font-black">小满机器人</span>
-            <span className="text-sm text-white/75">AI 健康生活陪伴</span>
+            <span className="block text-lg font-black">福伴机器人</span>
+            <span className="text-sm text-white/75">小福陪您慢慢来</span>
           </span>
         </button>
 

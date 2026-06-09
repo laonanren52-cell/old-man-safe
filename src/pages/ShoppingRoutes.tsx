@@ -14,14 +14,19 @@ export function ShoppingRoutes({ recommendation }: ShoppingRoutesProps) {
     <div>
       <PageHeader
         eyebrow="购物导航 Shopping Routes"
-        title="A/B/C 三条购物路线模拟与最优路线推荐"
-        description="小满不会只看最低价，而是综合距离、路线复杂度、台阶、路口、人流、价格优惠和老人身体情况。"
-        badge={`推荐路线 ${recommendation.bestRoute.id}`}
+        title={`今日推荐：${recommendation.bestRoute.storeName}`}
+        description="小福不会只看最低价，而是综合距离、路线复杂度、台阶、路口、人流、价格优惠和老人身体情况。"
+        badge={`${recommendation.bestRoute.elderFriendlyScore} 分`}
       />
 
       <div className="grid gap-5 xl:grid-cols-[0.75fr_1.25fr]">
         <ShoppingListCard items={recommendation.shoppingList} />
         <BestRoutePanel recommendation={recommendation} />
+      </div>
+
+      <div className="mt-5 rounded-[1.35rem] border border-[#f2c48d] bg-[#fff3df] p-5 shadow-sm">
+        <p className="text-sm font-black text-[#9b4f10]">不推荐南门菜市场的原因</p>
+        <p className="mt-3 text-base font-bold leading-8 text-slate-800">{recommendation.notRecommendedReason}</p>
       </div>
 
       <div className="mt-5 grid gap-5 xl:grid-cols-3">

@@ -79,7 +79,7 @@ function buildMealPlan(request: GenerateMealPlanRequest): GenerateMealPlanRespon
     breakfast: makeMeal('breakfast', '早餐', '07:30', breakfastDishes, '早餐以软、热、清淡为主，先照顾胃口。'),
     lunch: makeMeal('lunch', '午餐', '12:00', lunchDishes, '午餐根据天气和反馈减少油腻，增加软烂蔬菜和汤品。'),
     dinner: makeMeal('dinner', '晚餐', '18:20', dinnerDishes, '晚餐不过饱，少盐，避免重口味。'),
-    reasoning: `小满综合了${request.elderProfile.name}的饮食偏好、天气、${request.solarTerm.name}节气和饭后反馈，生成今日三餐。`,
+    reasoning: `小福综合了${request.elderProfile.name}的饮食偏好、天气、${request.solarTerm.name}节气和饭后反馈，生成今日三餐。`,
     adjustmentNotes: [
       needsLight ? '今天偏热或反馈油腻，整体改为更清淡。' : '今日保持少盐少油。',
       needsSoft ? '考虑牙口和反馈，菜品会更软烂。' : '保持普通软硬度。',
@@ -105,6 +105,6 @@ export function generateMealPlan(
     method: 'POST',
     body: fullRequest,
     mockData: () => buildMealPlan(fullRequest),
-    friendlyError: '三餐生成接口暂时不可用，小满已使用本地演示逻辑生成方案。',
+    friendlyError: '三餐生成接口暂时不可用，小福已使用本地演示逻辑生成方案。',
   });
 }

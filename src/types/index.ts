@@ -1,4 +1,13 @@
-export type PageKey = 'dashboard' | 'mealPlanner' | 'mealFeedback' | 'shoppingRoutes' | 'familyReport' | 'elderProfile';
+export type PageKey =
+  | 'home'
+  | 'elderConsole'
+  | 'dashboard'
+  | 'mealPlanner'
+  | 'mealFeedback'
+  | 'shoppingRoutes'
+  | 'routePlanning'
+  | 'familyReport'
+  | 'elderProfile';
 
 export type MealType = 'breakfast' | 'lunch' | 'dinner';
 
@@ -113,6 +122,9 @@ export interface RouteOption {
   crowdLevel: '少' | '适中' | '较多';
   hasCrosswalkOrLight: boolean;
   priceSummary: string;
+  priceLevel: number;
+  hasDiscount: boolean;
+  isFamiliar: boolean;
   elderFriendlyScore: number;
   recommendationIndex: number;
 }
@@ -122,6 +134,7 @@ export interface RouteRecommendation {
   routes: RouteOption[];
   bestRoute: RouteOption;
   recommendationReason: string;
+  notRecommendedReason: string;
 }
 
 export interface FamilyDailyReport {
@@ -135,7 +148,7 @@ export interface FamilyDailyReport {
     moodAndAppetite: string;
   };
   attentionItems: string[];
-  xiaomanMessage: string;
+  companionMessage: string;
 }
 
 export interface DashboardSnapshot {

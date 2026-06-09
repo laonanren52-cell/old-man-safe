@@ -9,7 +9,7 @@ export function buildDietSummary(records: MealRecord[] = mealRecords): string {
   const lunch = records.find((meal) => meal.type === 'lunch');
   const dinner = records.find((meal) => meal.type === 'dinner');
 
-  return `父亲今日三餐都有记录，午餐${lunch?.statusLabel ?? '需要留意'}，晚餐${dinner?.statusLabel ?? '已记录'}。小满已提醒晚上少盐、多配一点青菜和豆腐。`;
+  return `父亲今日三餐都有记录，午餐${lunch?.statusLabel ?? '需要留意'}，晚餐${dinner?.statusLabel ?? '已记录'}。小福已提醒晚上少盐、多配一点青菜和豆腐。`;
 }
 
 export function buildShoppingSummary(bestStore: RankedStore): string {
@@ -17,7 +17,7 @@ export function buildShoppingSummary(bestStore: RankedStore): string {
 }
 
 export function buildTravelSummary(bestStore: RankedStore, route: RoutePlan): string {
-  return `父亲计划下午 4 点前往${bestStore.name}，${route.distanceMeters} 米，预计步行 ${route.walkingMinutes} 分钟。小满已提醒带钥匙、手机、购物袋，天气热带水。`;
+  return `父亲计划下午 4 点前往${bestStore.name}，${route.distanceMeters} 米，预计步行 ${route.walkingMinutes} 分钟。小福已提醒带钥匙、手机、购物袋，天气热带水。`;
 }
 
 export async function generateDietSummary(): Promise<string> {
@@ -37,7 +37,7 @@ export async function generateFamilyReport(): Promise<FamilyReport> {
   const dietSummary = buildDietSummary(mealRecords);
   const shoppingSummary = buildShoppingSummary(bestStore);
   const travelSummary = buildTravelSummary(bestStore, route);
-  const statusSummary = '今日无需紧急处理，饮食和出门计划都已由小满做了温和提醒。';
+  const statusSummary = '今日无需紧急处理，饮食和出门计划都已由小福做了温和提醒。';
   const careHint = '建议晚上电话关心一下，问问晚饭吃得怎么样、出门累不累。';
   const fullSummary = `${statusSummary}${dietSummary}${shoppingSummary}${travelSummary}${careHint}`;
 

@@ -14,13 +14,13 @@ export function RouteCard({ route, selected = false }: RouteCardProps) {
           <p className="text-sm font-bold text-slate-500">{route.storeName}</p>
           <h3 className="mt-1 text-xl font-black text-slate-950">{route.name}</h3>
         </div>
-        {selected ? <StatusBadge tone="green">小满推荐</StatusBadge> : <StatusBadge tone="slate">备选</StatusBadge>}
+        {selected ? <StatusBadge tone="green">小福推荐</StatusBadge> : <StatusBadge tone="slate">备选</StatusBadge>}
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         <MiniMetric label="距离" value={`${route.distanceMeters} 米`} />
         <MiniMetric label="用时" value={`${route.estimatedMinutes} 分钟`} />
-        <MiniMetric label="推荐指数" value={`${route.recommendationIndex}`} />
+        <MiniMetric label="适老评分" value={`${route.recommendationIndex} 分`} />
       </div>
 
       <div className="mt-4 rounded-[1rem] bg-white/78 p-4">

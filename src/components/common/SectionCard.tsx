@@ -9,7 +9,7 @@ interface SectionCardProps {
 export function SectionCard({ children, className = '', padded = true }: SectionCardProps) {
   return (
     <section
-      className={`rounded-[1.5rem] border border-white/75 bg-white/86 shadow-[0_20px_58px_rgba(15,23,42,0.08)] backdrop-blur-xl ${padded ? 'p-5 sm:p-6' : ''} ${className}`}
+      className={`rounded-[1.5rem] border border-white/80 bg-white/92 shadow-[0_18px_48px_rgba(58,50,38,0.08)] ${padded ? 'p-5 sm:p-6' : ''} ${className}`}
     >
       {children}
     </section>

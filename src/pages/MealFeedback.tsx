@@ -15,14 +15,14 @@ export function MealFeedback({ result, onSubmit }: MealFeedbackProps) {
     <div>
       <PageHeader
         eyebrow="饭后反馈 Meal Feedback"
-        title="让小满从每一餐反馈里学习下一餐怎么调整"
-        description="老人吃完饭后，小满会询问胃口、口味、是否吃完和身体感受，再把结果写入前端状态，影响下一餐推荐。"
+        title="让小福从每一餐反馈里学习下一餐怎么调整"
+        description="老人吃完饭后，小福会询问胃口、口味、是否吃完和身体感受，再把结果写入前端状态，影响下一餐推荐。"
         badge={result ? '已学习反馈' : '等待反馈'}
       />
 
       <div className="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
         <SectionCard>
-          <h2 className="text-2xl font-black text-slate-950">小满自动询问</h2>
+          <h2 className="text-2xl font-black text-slate-950">小福自动询问</h2>
           <div className="mt-4 grid gap-3">
             {[
               '这顿饭吃得还合口吗？',
